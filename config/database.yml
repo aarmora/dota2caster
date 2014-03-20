@@ -6,10 +6,12 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: myapp_development
+  database: d4gu9046s9mee5
   pool: 5
-  password:
-  
+  username: rdubscainkxskt
+  password: HKQKTv3HBcMwzzE6Gj1BPQlMaM
+  port: 5432
+
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
