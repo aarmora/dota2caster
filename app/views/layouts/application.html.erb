@@ -1,82 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dota2caster</title>
+  <title>Dota 2 Caster</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="navbar navbar-default">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">Brand</a>
-  </div>
-  <div class="navbar-collapse collapse navbar-responsive-collapse">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Active</a></li>
-      <li><a href="#">Link</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li class="dropdown-header">Dropdown header</li>
-          <li><a href="#">Separated link</a></li>
-          <li><a href="#">One more separated link</a></li>
-        </ul>
-      </li>
-    </ul>
-    <form class="navbar-form navbar-left">
-      <input type="text" class="form-control col-lg-8" placeholder="Search">
-    </form>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Link</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
-    <div class="page-header" id="banner">
-        <div class="row">
-          <div class="col-lg-6">
-            <h1>Lumen</h1>
-            <p class="lead">Light and shadow</p>
-          </div>
-          <div class="col-lg-6" style="padding: 15px 15px 0 15px;">
-            <div class="well sponsor">
-              <a href="http://srv.buysellads.com/direct/click/track/yes/x/G6NDC27ICWAI627UCWALYK7UCKBILKJMCT7I5" rel="nofollow" target="_blank">
-                <span style="float: left; margin-right: 15px;">
-                  <img src="http://srv.buysellads.com/direct/image/track/yes/x/G6NDC27ICWAI627UCWALYK7UCKBILKJMCT7I5" width="175" height="135">
-                </span>
-              </a>
-              <a href="http://srv.buysellads.com/direct/click/track/yes/x/G6NDC27ICWAI627UCWALYK7UCKBILKJMCT7I5" rel="nofollow" target="_blank">
-                <h4 style="margin-bottom: 0.4em;">Treehouse</h4>
-                <div class="clearfix">
-                  <p>Learn Web Design, Coding, Mobile App Development &amp; More.</p>
-                  <p>Start Learning for Free!</p>
-                </div>
-              </a>
-            </div>
-          </div>
+  <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <%= link_to "Dota 2 Caster", "../", :class => "navbar-brand"%>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            
+            <li>
+              <%= link_to "AD2L", "http://amateurdota2league.com", :target => "blank"%>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+            <li><%= link_to image_tag("http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_small.png"), '/auth/steam', :class => 'steamsignin' %></li>
+          </ul>
+
         </div>
       </div>
+  </div>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Jumbotron</h1>
+      <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+    </div>
 
-<%= yield %>
+    
+    <div class="panel panel-default main-content">
+      <div class="panel-body">
+        <%= yield %>
+      </div>
+    </div>
+    <div class="panel panel-default side-content">
+      <div class="panel-body">
+        <%= render  "layouts/side_panel" %>
+      </div>
+    </div>
 
+  </div>
 </body>
 </html>

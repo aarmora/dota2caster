@@ -20,6 +20,19 @@
  * Based on Bootstrap
 */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+
+
+/*My stuff*/
+.main-content{
+  width:65%;
+  float: left;
+}
+.side-content{
+  width:33%;
+  float: right;
+}
+
+/*Their stuff*/
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

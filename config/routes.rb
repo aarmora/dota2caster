@@ -1,5 +1,6 @@
 Dota2caster::Application.routes.draw do
   get "welcome/index"
+  post 'auth/steam/callback' => 'welcome#auth_callback'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -54,4 +55,5 @@ Dota2caster::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  root :to => 'welcome#index'
 end
