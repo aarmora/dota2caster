@@ -9,8 +9,6 @@ class WelcomeController < ApplicationController
       :image => auth.extra.raw_info['avatar'],
       :uid => auth.uid
     }
-    
-    redirect_to teams_url
   end
 
   def logout
