@@ -1,5 +1,9 @@
 class WelcomeController < ApplicationController
+  skip_before_filter :verify_authenticity_token, :only => :auth_callback
+  
   def index
+    @casters = Caster.all
+    @channels = @casters.select{|p| p.twitch}
   end
   
   def auth_callback
@@ -10,7 +14,7 @@ class WelcomeController < ApplicationController
       :uid => auth.uid
     }
     
-    redirect_to teams_url
+    redirect_to root_path
   end
 
   def logout

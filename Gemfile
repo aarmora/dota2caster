@@ -6,6 +6,9 @@ gem 'rails', '4.0.2'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 
+# gem for managing environment variables (steam webapi key)
+gem 'figaro'
+
 # use Steam OpenID Omniauth gem for authenticating Steam users
 gem 'omniauth-steam'
 
@@ -20,6 +23,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+gem 'kappa', '~> 1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
