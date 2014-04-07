@@ -1,0 +1,18 @@
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Steam</th>
+      <th>Caster</th>
+      <th>Twitch</th>
+      <th>Column heading</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr ng-repeat="caster in casters">
+        <td><a ng-href="steam://friends/add/{{caster.steam_id}}"><button type="button" class="butn btn-link">Add</button></a></td>
+        <td>{{caster.name}}</td>
+        <td><a href="http://twitch.tv/{{caster.twitch}}" target="_blank">{{caster.twitch}}</a></td>
+        <td>Column content</td>
+      </tr>
+  </tbody>
+</table>
