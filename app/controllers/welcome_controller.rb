@@ -1,9 +1,15 @@
 class WelcomeController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => :auth_callback
+
   
   def index
     @casters = Caster.all
-    @channels = @casters.select{|p| p.twitch}
+  end
+
+  def show
+  end
+  
+  def personal
   end
   
   def auth_callback

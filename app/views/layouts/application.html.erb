@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="dota2caster">
 <head>
   <title>Dota 2 Caster</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -26,12 +26,11 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
             <%if session[:current_user]%>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= image_tag session[:current_user][:image], :alt => "Steam Avatar" %> <%= session[:current_user][:nickname] %> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Edit information</a></li>
+                  <li><a href="#/editinfo">Edit information</a></li>
                   <li><%= link_to 'Logout', logout_url, :class => 'logout' %></li>
                 </ul>
               </li>
@@ -45,14 +44,13 @@
   </div>
   <div class="container">
     <div class="jumbotron">
-      <h1>Jumbotron</h1>
-      <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <%=link_to (image_tag 'silencer-and-spirit-breaker_wide.jpg', :alt => "jumbotron", :style => "width:9%"), '#'%>
       <p><a class="btn btn-primary btn-lg">Learn more</a></p>
     </div>
 
     
     <div class="panel panel-default main-content">
-      <div class="panel-body">
+      <div class="panel-body" ng-view>
         <%= yield %>
       </div>
     </div>
