@@ -2,8 +2,6 @@ Dota2caster::Application.routes.draw do
   get "welcome/index"
   post 'auth/steam/callback' => 'welcome#auth_callback'
   get 'logout' => 'welcome#logout'
-  resources :welcome
-  post 'welcome/personal' => 'welcome#personal'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
