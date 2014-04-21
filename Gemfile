@@ -18,16 +18,30 @@ gem 'sass-rails', '~> 4.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
+# gem 'rest_in_place'
+gem 'best_in_place', :git => 'https://github.com/aaronchi/best_in_place.git'
+
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem "font-awesome-rails"
+
 gem 'kappa', '~> 1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+#paperclip
+gem "paperclip", "~> 4.1"
+
+#gem select2
+# remove when main gem updated
+gem "select2-rails", :git => 'git://github.com/chilian/select2-rails.git'
+
+gem 'jquery-datatables-rails', :git => 'git://github.com/rweng/jquery-datatables-rails.git'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

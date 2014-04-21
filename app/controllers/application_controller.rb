@@ -8,16 +8,17 @@ class ApplicationController < ActionController::Base
 
   def load_user
     # In rails 4, this would be .find_or_create_by! (:steamid => session[:current_user][:uid])
-    @current_user = Caster.find_or_create_by! (:steamid => session[:current_user][:uid])
+    @current_user = Caster.find_or_create_by! :steam_id => session[:current_user][:uid] if session[:current_user]
     # If they are a new user, ship them over to the profile page
     if @current_user && @current_user.new_record?
       @current_user.save!
-      redirect_to root_path
+      redirect_to @current_user
     elsif @current_user
       Caster.find(@current_user.id).update_attributes(:name => session[:current_user][:nickname])
     end
 
     @can_edit = @current_user && @current_user.is_admin?
+
   end
 
   def check_active_streams

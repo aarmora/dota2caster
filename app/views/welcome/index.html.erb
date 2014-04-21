@@ -1,7 +1,7 @@
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
-      <th>#</th>
+      <th>Add on steam</th>
       <th>Caster</th>
       <th>Column heading</th>
       <th>Column heading</th>
@@ -10,9 +10,13 @@
   <tbody>
   	<%@casters.each do |caster|%>
 	    <tr>
-	      <td>1</td>
-	      <td><%=caster.name%></td>
-	      <td><%=caster.twitch%></td>
+	      <td>
+          <%= link_to "steam://friends/add/#{caster.steam_id}" do%>
+            <span class="fa fa-plus"></span>
+          <%end%>
+        </td>
+	      <td><%=link_to caster.name, caster%></td>
+	      <td><%=link_to caster.twitch, "http://twitch.tv/#{caster.twitch}", :target => "_blank"%></td>
 	      <td>Column content</td>
 	    </tr>
 	  <%end%>

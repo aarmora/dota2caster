@@ -11,14 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140330190918) do
+ActiveRecord::Schema.define(version: 20140421130010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "caster_comments", force: true do |t|
+    t.integer  "commenter_id"
+    t.integer  "recipient_id"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "casters", force: true do |t|
     t.string   "name"
-    t.integer  "steam_id"
+    t.integer  "steam_id",           limit: 8
     t.string   "twitch"
     t.string   "youtube"
     t.string   "twitter"
@@ -26,6 +34,15 @@ ActiveRecord::Schema.define(version: 20140330190918) do
     t.boolean  "email_flag"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "endorsements_count",           default: 0,     null: false
+    t.integer  "comments_count",               default: 0,     null: false
+    t.boolean  "caster",                       default: false
+    t.text     "bio"
+  end
+
+  create_table "player_votes", force: true do |t|
+    t.integer "voter_id"
+    t.integer "recipient_id"
   end
 
 end
