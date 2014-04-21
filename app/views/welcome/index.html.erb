@@ -1,1 +1,20 @@
-hey
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Caster</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<%@casters.each do |caster|%>
+	    <tr>
+	      <td>1</td>
+	      <td><%=caster.name%></td>
+	      <td><%=caster.twitch%></td>
+	      <td>Column content</td>
+	    </tr>
+	  <%end%>
+  </tbody>
+</table>
