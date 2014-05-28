@@ -10,7 +10,8 @@
  *
  *= require_self
  *= require dataTables/jquery.dataTables
-  *= require font-awesome
+ *= require dataTables/jquery.dataTables.bootstrap3
+ *= require font-awesome
  *= require_tree .
  */
 @import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");

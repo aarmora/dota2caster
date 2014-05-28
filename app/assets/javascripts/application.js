@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require dataTables/jquery.dataTables
+//= require dataTables/jquery.dataTables.bootstrap3
 //= require best_in_place
 //= require_tree .
 
@@ -36,5 +37,8 @@ $(document).ready(function(){
       if (settings.type == 'GET') return; // Don't add anything to a get request let IE turn it into a POST.
       settings.data = settings.data || "";
       settings.data += (settings.data ? "&" : "") + "authenticity_token=" + encodeURIComponent(AUTH_TOKEN);
+    });
+    $('#datatables').dataTable({
+      "bPaginate": false
     });
 });
