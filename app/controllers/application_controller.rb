@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   before_filter :load_user
   before_filter :check_active_streams
- 	protect_from_forgery with: :null_session
+ 	protect_from_forgery  #with: :null_session
 
 
   def load_user
