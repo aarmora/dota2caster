@@ -23,7 +23,7 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-46030946-2', 'dota2caster.com');
+ga('create', 'UA-46030946-3', 'castdota.com');
 ga('send', 'pageview');
 
 $(document).ready(function(){
