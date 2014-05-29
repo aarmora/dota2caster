@@ -4,7 +4,7 @@
       <th>Add on steam</th>
       <th>Caster</th>
       <th>Column heading</th>
-      <th>Column heading</th>
+      <th>Endorsements</th>
     </tr>
   </thead>
   <tbody>
@@ -17,7 +17,7 @@
         </td>
 	      <td><%=link_to caster.name, caster%></td>
 	      <td><%=link_to caster.twitch, "http://twitch.tv/#{caster.twitch}", :target => "_blank"%></td>
-	      <td>Column content</td>
+	      <td><%= caster.endorsements.size %></td>
 	    </tr>
 	  <%end%>
   </tbody>

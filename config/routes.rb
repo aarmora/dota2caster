@@ -2,7 +2,12 @@ Dota2caster::Application.routes.draw do
   get "welcome/index"
   post 'auth/steam/callback' => 'welcome#auth_callback'
   get 'logout' => 'welcome#logout'
-  resources :casters
+
+  resources :casters, :only => [:new, :index, :show, :update] do
+    member do
+      match 'endorse' => 'casters#endorse', :via => :post
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

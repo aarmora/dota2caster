@@ -1,6 +1,6 @@
 <form class="form-horizontal">
   <fieldset>
-    <legend><%=@caster.name%></legend>
+    <legend><%=@caster.name%> <%= render :partial => "casters/endorsement_icon", :locals => {:user => @caster} %></legend>
     <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">Bio</label>
       <div class="col-lg-10">

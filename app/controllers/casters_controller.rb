@@ -24,4 +24,20 @@ class CastersController < ApplicationController
     end
   end
 
+  def endorse
+    if @current_user
+      @caster = Caster.find(params[:id])
+      if params[:endorse].to_i == 1
+        @caster.endorsers << @current_user
+      else
+        @caster.endorsers.delete(@current_user)
+      end
+    end
+
+    respond_to do |format|
+      format.html { redirect_to(@caster) }
+      format.json { render :json => {:endorsed => params[:endorse].to_i == 1} }
+    end
+  end
+
 end
