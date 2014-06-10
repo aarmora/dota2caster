@@ -33,7 +33,11 @@
     <div class="form-group">
       <label for="inputPassword" class="col-lg-2 control-label">Twitch</label>
       <div class="col-lg-10">
-        <%= best_in_place_if @can_edit_self, @caster, :twitch, :type => :input %>
+        <% if @can_edit_self %>
+          <%= best_in_place @caster, :twitch, :type => :input %>
+        <% else %>
+          <%= link_to @caster.twitch, "http://twitch.tv/#{@caster.twitch}"%>
+        <% end %>
         <%if @can_edit_self%>
           (Just channel name. e.g. Amateurdota2league)
         <%end%>

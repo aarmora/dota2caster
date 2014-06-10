@@ -39,6 +39,8 @@ $(document).ready(function(){
       settings.data += (settings.data ? "&" : "") + "authenticity_token=" + encodeURIComponent(AUTH_TOKEN);
     });
     $('#datatables').dataTable({
-      "bPaginate": false
+      "bPaginate": true,
+      "iDisplayLength": 15,
+      "aaSorting": [[ 3, "desc" ]]
     });
 });

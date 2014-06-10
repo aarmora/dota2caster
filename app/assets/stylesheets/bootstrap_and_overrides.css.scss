@@ -40,12 +40,13 @@
     left: -6px;
 }
 .main-content{
-  width:65%;
+  width:73%;
   float: left;
   border: none;
 }
 .side-content{
-  width:33%;
+  max-width: 400px;
+  width:25%;
   float: right;
   border: none;
 }
@@ -64,13 +65,7 @@
   width: 100%;
 }
 
-.footer {
-  position:absolute;
-  bottom:0;
-  width:100%;
-  height:60px;  
-  background-color: #158cba;
-}
+
 
 /*Carousel*/
 /* BOOTSTRAP 3.x GLOBAL STYLES

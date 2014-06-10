@@ -7,10 +7,14 @@ class Caster < ActiveRecord::Base
   has_many :outgoing_endorsements, :class_name => "CasterVote", :foreign_key => "endorser_id", :dependent => :delete_all
 
   def is_admin?
-  	# TODO: Move into an ENV config?
   	#                  Rasputin
-  	steam_ids = ["76561198040889152"]
-  	steam_ids.include? self.steam_id
+    if self.steam_id = "76561198040889152"
+      true
+    end
+  end
+
+  def pizza
+    self.id = 5
   end
 
   def permission_role

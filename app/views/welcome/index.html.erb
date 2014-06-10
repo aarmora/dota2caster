@@ -3,7 +3,7 @@
     <tr>
       <th>Add on steam</th>
       <th>Caster</th>
-      <th>Column heading</th>
+      <th>Twitch</th>
       <th>Endorsements</th>
     </tr>
   </thead>
@@ -16,7 +16,11 @@
           <%end%>
         </td>
 	      <td><%=link_to caster.name, caster%></td>
-	      <td><%=link_to caster.twitch, "http://twitch.tv/#{caster.twitch}", :target => "_blank"%></td>
+	      <td>
+          <% unless caster.twitch == "NULL" %>
+            <%=link_to caster.twitch, "http://twitch.tv/#{caster.twitch}", :target => "_blank"%>
+          <% end %>
+        </td>
 	      <td><%= caster.endorsements.size %></td>
 	    </tr>
 	  <%end%>

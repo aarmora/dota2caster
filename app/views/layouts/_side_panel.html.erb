@@ -12,20 +12,20 @@
     <%
     active_stream_names = []
     unless @active_streams.empty?%>
-        <%@active_streams.each do |stream|
-            #Probably a better way to do this
-            active_stream_names << stream.channel.display_name.downcase
-          %>
-            <li class="list-group-item">
-              <%=link_to stream.channel.display_name, stream.channel.url%>
-              <span class="badge"><%= stream.viewer_count%></span>
-            </li>
-        <%end%>
+      <%@active_streams.each do |stream|
+          #Probably a better way to do this
+          active_stream_names << stream.channel.display_name.downcase
+        %>
+          <li class="list-group-item">
+            <%=link_to stream.channel.display_name, stream.channel.url%>
+            <span class="badge"><%= stream.viewer_count%></span>
+          </li>
+      <%end%>
     <%end%>
     <%@twitch_accounts.each do |inactivestream|%>
       <%if active_stream_names.include?(inactivestream) == false%>
           <li class="list-group-item">
-            <%=inactivestream%>
+            <%= link_to inactivestream, "http://twitch.tv/#{inactivestream}"%>
             <span class="badge"></span>
           </li>
         <%end%>
