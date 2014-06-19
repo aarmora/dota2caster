@@ -107,13 +107,12 @@ body {
   height: 400px;
   background-color:#555;
 }
-.carousel img {
+.carousel img:not(.not_carousel) {
   position: absolute;
   top: 0;
   left: 0;
   min-height: 400px;
 }
-
 
 
 /* MARKETING CONTENT

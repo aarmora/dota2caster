@@ -51,24 +51,36 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner">
       <div class="item active">
         <%= image_tag "kotl_36.jpg", :class => "img-responsive", :alt => "kotl_36"%>
         <div class="container">
           <div class="carousel-caption">
-            <h1>Bootstrap 3 Carousel Layout</h1>
+            <h1><%=image_tag "canuck.jpg", :alt => "Canuck", :class => "not_carousel"%>ptn. <%=image_tag "canuck.jpg", :alt => "Canuck", :class => "not_carousel"%>anuck Dota</h1>
             <pthis is="" an="" example="" layout="" with="" carousel="" that="" uses="" the="" bootstrap="" 3="" styles.<="" small=""><p></p>
-            <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Learn More</a>
-          </p></pthis></div>
+            <%=link_to "Profile", caster_path(125), :class => "btn btn-large btn-primary"  %>
+          </div>
         </div>
       </div>
       <div class="item">
-        <%= image_tag "Enchantress_36.jpg", :class => "img-responsive", :alt => "Enchantress_36"%>
+        <%= image_tag "VG_banner.jpg", :class => "img-responsive", :alt => "VG_banner"%>
         <div class="container">
           <div class="carousel-caption">
-            <h1>Changes to the Grid</h1>
-            <p>Bootstrap 3 still features a 12-column grid, but many of the CSS class names have completely changed.</p>
+            <h1>Vicara Gaming</h1>
+            <p>Multi-Lingual DotA2 Casting, Let's Plays, and much more.</p>
+            <%=link_to "Profile", caster_path(172), :class => "btn btn-large btn-primary"  %>
+            <%=link_to "Visit Website", "http://www.vicaragaming.com", :class => "btn btn-large btn-primary", :target => "_blank" %>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag "Enchantress_36.jpg", :alt => "Enchantress_36"%>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1><%=image_tag "4states.jpg", :alt => "Canuck", :class => "not_carousel"%> 4States Casting</h1>
+            <p>Great casting coming to you!</p>
             <a class="btn btn-large btn-primary" href="#">Learn more</a>
           </div>
         </div>
@@ -78,7 +90,7 @@
         <div class="container">
           <div class="carousel-caption">
             <h1>Want to be featured here?</h1>
-            <p>With "mobile-first" there is now only one percentage-based grid.</p>
+            <p>Get your casting skills noticed!</p>
             <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
           </div>
         </div>
